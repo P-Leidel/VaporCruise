@@ -1,0 +1,5 @@
+// id, source, profile, entry, embedded header, symbol, direct dependencies (transitive closure is generated).
+VC_PROGRAM(FullscreenVertex, "FullscreenTriangle.vs.hlsl", "vs_5_0", "main", "FullscreenTriangle.vs.h", g_FullscreenTriangleVS, "")
+VC_PROGRAM(SceneCompositePixel, "SceneComposite.ps.hlsl", "ps_5_0", "main", "SceneComposite.ps.h", g_SceneCompositePS, "scene-frame.hlsli;scene-background.hlsli;scene-regional.hlsli;scene-panorama.hlsli;scene-grid.hlsli;scene-output.hlsli;HintGlyphs.hlsli")
+VC_PROGRAM(TerrainVertex, "terrain.vs.hlsl", "vs_5_0", "main", "terrain.vs.h", g_TerrainVS, "camera-projection.hlsli;terrain-settling.hlsli")
+VC_PROGRAM(TerrainPixel, "terrain.ps.hlsl", "ps_5_0", "main", "terrain.ps.h", g_TerrainPS, "scene-frame.hlsli;scene-grid.hlsli;scene-background.hlsli;scene-regional.hlsli;scene-output.hlsli")

@@ -1,0 +1,23 @@
+file(SHA256 "${EXECUTABLE}" EXECUTABLE_HASH)
+if(DEFINED BUILD_MARKER)
+    include("${CMAKE_CURRENT_LIST_DIR}/source-identity.cmake")
+    vaporcruise_read_source_identity("${SOURCE_DIR}" CURRENT_SOURCE_REVISION CURRENT_SOURCE_STATE)
+    # Retain the configure revision (the compile definition), and never upgrade
+    # a dirty/unknown configure snapshot to clean after linking.
+    if(NOT CURRENT_SOURCE_STATE STREQUAL "clean")
+        set(SOURCE_STATE "${CURRENT_SOURCE_STATE}")
+    elseif(NOT CURRENT_SOURCE_REVISION STREQUAL SOURCE_REVISION)
+        set(SOURCE_STATE "dirty")
+    elseif(NOT SOURCE_STATE STREQUAL "clean")
+        if(NOT SOURCE_STATE STREQUAL "dirty")
+            set(SOURCE_STATE "unknown")
+        endif()
+    endif()
+    file(WRITE "${BUILD_MARKER}"
+        "{\"schema_version\":2,\"project\":\"VaporCruise\",\"version\":\"${PROJECT_VERSION}\",\"source_revision\":\"${SOURCE_REVISION}\",\"source_state\":\"${SOURCE_STATE}\",\"configuration\":\"${CONFIGURATION}\",\"architecture\":\"${ARCHITECTURE}\",\"runtime\":\"${RUNTIME}\",\"executable_sha256\":\"${EXECUTABLE_HASH}\"}\n")
+endif()
+if(CONFIGURATION STREQUAL "Debug")
+    file(WRITE "${MARKER}" "{\"configuration\":\"Debug\",\"executable_sha256\":\"${EXECUTABLE_HASH}\"}\n")
+elseif(EXISTS "${MARKER}")
+    file(REMOVE "${MARKER}")
+endif()

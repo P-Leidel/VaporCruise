@@ -1,0 +1,8 @@
+// This file is consumed by the C++ and HLSL preprocessors.
+#define VC_FRAME_SLOT 0
+#define VC_SECTION_SLOT 1
+#define VC_COVERAGE_SLOT 0
+#define VC_STEADY_SLOT 1
+#define VC_ANIMATED_SLOT 2
+#define VC_DETAIL_SLOT 6
+#define VC_PANORAMA_SAMPLER_SLOT 0

@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-04T17:55:43.948447+00:00",
+  "completion": true,
+  "executable": "VaporCruise.exe",
+  "executable_sha256": "CEF0852755A648AF3975D61EE55F0619999AD0CC1A751FEB6C33D69DB38FEF49",
+  "source_capture_directory": "build/evidence/original-preview-captures",
+  "source_capture_frame_count": 222,
+  "scope": "Native GPU captures. Terrain details are recorded crops. GIF decoded frames match their fixed-palette quantized native sources.",
+  "motion_contract": {
+    "sample_rate_fps": 6,
+    "frame_count": 48,
+    "width": 1280,
+    "height": 720,
+    "travel_cells_per_second": 1.5,
+    "total_duration_ms": 8000,
+    "replay": "Route and fog reset at loop boundary; does not measure live presentation cadence."
+  },
+  "assets": [
+    {
+      "file": "magenta.png",
+      "sha256": "1D6850A9F1BCDD3C66044012C91EF6AFB4336E3EF61100EFD2C2E7919B8E6088",
+      "source_pose": "magenta-s0-standard"
+    },
+    {
+      "file": "cyan.png",
+      "sha256": "3884523DCF7721FE28274F9C6D4D94754A671CD130210E081FED53F4CE592F5D",
+      "source_pose": "cyan-s0-standard"
+    },
+    {
+      "file": "amber.png",
+      "sha256": "F5403803E5FC810F7AF29F72ACE5717D7524582064B5EC7720579275415D7359",
+      "source_pose": "amber-s0-standard"
+    },
+    {
+      "file": "magenta-motion.gif",
+      "sha256": "6C93626504B52F4C3E7FCB912C99C28DD55DBF5A90094BCACEB4220F9D813984",
+      "decoded_frames": 48,
+      "total_duration_ms": 8000,
+      "quantized_source_match": true,
+      "source_frames": [
+        {
+          "name": "motion-p0-00",
+          "sha256": "39D3B1B6F86F5B5639CCFE1CE25E45480D339FA6AACCD5FD1969CEAEF2904B1F"
+        },
+        {
+          "name": "motion-p0-01",
+          "sha256": "7C0BF9A9DC5064C7B38C4108CF76103947A949382F099A2D40E5E1B06F11E37A"
+        },
+        {
+          "name": "motion-p0-02",
+          "sha256": "6026A07492ADE38BD22C7AA1430245871726146037DB084B82011FC8BB04318B"
+        },
+        {
+          "name": "motion-p0-03",
+          "sha256": "4D896EF6A107E126E28A310CD16B9F94E440F5C2644F5F3F23F7953326D72DCE"
+        },
+        {
+          "name": "motion-p0-04",
+          "sha256": "9E9CA4A9CBEBBB02ACFDADAE901EDA6B51D8C5C585C514B142D63F368D852F0B"
+        },
+        {
+          "name": "motion-p0-05",
+          "sha256": "13769F596B48C5888F73AC1A29A15A7016CBE8ABF305F115B38C8BA45E887D9B"
+        },
+        {
+          "name": "motion-p0-06",
+          "sha256": "62C1B4DED37E27DBA57D80E92F1A7DEEF504B3A54EA4B5C09415F85BF2F1A881"
+        },
+        {
+          "name": "motion-p0-07",
+          "sha256": "1056857FEE2C08D973B3FECB66FF9B5EC60C6F3F66E7F8FEBAEF2112857AFA0D"
+        },
+        {
+          "name": "motion-p0-08",
+          "sha256": "E9ECF2CED43C48A5A68277AECE955C29D40A5B9F50120E5C13F7DAC03196E261"
+        },
+        {
+          "name": "motion-p0-09",
+          "sha256": "062DAE26A524EB2824BC4C874D01CC5ADF3E5C713FABD109EA30E13CB2A9D41C"
+        },
+        {
+          "name": "motion-p0-10",
+          "sha256": "0C09A01D340A0CE3293912307AA5A9B80222145B20512947833C1F2FB04AF04E"
+        },
+        {
+          "name": "motion-p0-11",
+          "sha256": "6A5E516A52B4BBDD53CCEB8F45D7C7C2EF47FEE5204DA4DE2D0AC68D6B5759F9"
+        },
+        {
+          "name": "motion-p0-12",
+          "sha256": "6888142CAC198F3D901D995908AEBF1B668A0373E1A771954B4A7F136936E6A4"
+        },
+        {
+          "name": "motion-p0-13",
+          "sha256": "1626878805CEAF50123B1B121AAE554DA960EA7ABE4196D6D751CE027A0A111F"
+        },
+        {
+          "name": "motion-p0-14",
+          "sha256": "1DB244EC3C33FA2D0958DC1E1586AC0088A1D84D8974088639729581A42879F1"
+        },
+        {
+          "name": "motion-p0-15",
+          "sha256": "14FE39636C103CBB56FE9BBE0781EC8758A0A69ADB399D167A1080AA7E1B3347"
+        },
+        {
+          "name": "motion-p0-16",
+          "sha256": "F15AF1DFA18BDB14BDBDF19D6C0E0CA9DE43E273206715B019175BE652A9B66B"
+        },
+        {
+          "name": "motion-p0-17",
+          "sha256": "4D650DC76760D468AD1F9FB7417EB62A9AE437BD8639B0D8F4DAEB9B197E4F5C"
+        },
+        {
+          "name": "motion-p0-18",
+          "sha256": "16F748A66CE70EF31649BC8F8EC0EA2A41D46674FD339B601E042B3E9B0BEB13"
+        },
+        {
+          "name": "motion-p0-19",
+          "sha256": "4EFA22D486C8EB5F8A146AEDECEDD849FE44D24649662DE2C7960E266D9B2DAD"
+        },
+        {
+          "name": "motion-p0-20",
+          "sha256": "12DD8E40149D9CDF00E4C9766C41DD3F6984E0B29D993F22EA7D5514BD5E0F99"
+        },
+        {
+          "name": "motion-p0-21",
+          "sha256": "A021716AAE3AFDB50634D1D5D94387CE2A5CA800AA32BD05DE31BBB0A4E54DDC"
+        },
+        {
+          "name": "motion-p0-22",
+          "sha256": "965E49360CFA8CCB6AA81D74E2D4D7709CEB3890AA2EA68ACD7841B202FC16E7"
+        },
+        {
+          "name": "motion-p0-23",
+          "sha256": "12596FBCFC7B12B4FFD8C24992F037846178C99E2FD879E10A67E2F3FF310CD9"
+        },
+        {
+          "name": "motion-p0-24",
+          "sha256": "325CDB7293C8AA93332C5F37281D38389A56AC40063C377C1C3438D714B40127"
+        },
+        {
+          "name": "motion-p0-25",
+          "sha256": "3158C13CD05E90B4F35DDD2621B726A3232E97F34610647C069C27FEFCA0D63C"
+        },
+        {
+          "name": "motion-p0-26",
+          "sha256": "E966D8014EAD74248F61DAD673039CC65E0D8E7BCF6A51004CB5DE826828A44B"
+        },
+        {
+          "name": "motion-p0-27",
+          "sha256": "B81F2A7B864C18474003715D919803B3DE7BB417A8BF28D34D7B13B3A4BB3E8D"
+        },
+        {
+          "name": "motion-p0-28",
+          "sha256": "1FD9A946896D7DD4C8D6CECA6CB6308DB6F11907059697DD8B2AD7848C48FF04"
+        },
+        {
+          "name": "motion-p0-29",
+          "sha256": "824ADA683AE4DE54A1DD069F210BCB40189F50B2087846FAAF2DA18D06E9B930"
+        },
+        {
+          "name": "motion-p0-30",
+          "sha256": "794D520D7A7094741372FA0BD22210DDE46EB9A968AA122BE5E279A89EB4DB60"
+        },
+        {
+          "name": "motion-p0-31",
+          "sha256": "FC9E3FD53ABA967BFE46C900CF4C13A3F2D79A08C2BB80DD06F5DE5E1C0EEA38"
+        },
+        {
+          "name": "motion-p0-32",
+          "sha256": "41BD2FB719C412EA2B29D8D912F81E5D79336276C45B89CF015C50B1FE65E70C"
+        },
+        {
+          "name": "motion-p0-33",
+          "sha256": "87E39E4D185F89DF21BA43D7F60EC2FA4EC1A53AD186F208933FA1E2AA0E9F64"
+        },
+        {
+          "name": "motion-p0-34",
+          "sha256": "0692F9ECF205479C3D8410EB1B91F34698864C8A804E32F563F96F9850A8C5E6"
+        },
+        {
+          "name": "motion-p0-35",
+          "sha256": "7F4D7ABCB7789413FEC46B9913440BDBB0CB48C56A502C809B8BC94F9729D290"
+        },
+        {
+          "name": "motion-p0-36",
+          "sha256": "66B82FDAB91986C3FA7BCA812926D24E5677A7D676294A6728A49051323DB108"
+        },
+        {
+          "name": "motion-p0-37",
+          "sha256": "87D40C81903F2274BA31B216FED3A4A411D120CAC455B43865A56F048B320563"
+        },
+        {
+          "name": "motion-p0-38",
+          "sha256": "12FFA253746A3AE6C1C862B8BA9674E6667CE0375D8996BAA9227A2A8D3BA58B"
+        },
+        {
+          "name": "motion-p0-39",
+          "sha256": "F54A82AA61FE06DE74359E4C8A46FAD3D518DC9F5B4CD875B807A79A880D9690"
+        },
+        {
+          "name": "motion-p0-40",
+          "sha256": "855EBC25A0A928FB14847F5A36CBC4C5A363F5540D1D13BD078572B65099B427"
+        },
+        {
+          "name": "motion-p0-41",
+          "sha256": "896E8CD73FF6DB89BBCA9B606AFB5C721844F8874E7DD9290EA8B0EFE125B44A"
+        },
+        {
+          "name": "motion-p0-42",
+          "sha256": "A15F3E17758BD7067E18A7DC9F6177DC98F9C68E61914D85983FDAD230600E15"
+        },
+        {
+          "name": "motion-p0-43",
+          "sha256": "EC52502E3A3D2E75444E1697C8613080262309371B2D448E4FBE712A81A7B5B6"
+        },
+        {
+          "name": "motion-p0-44",
+          "sha256": "C16834521D1496C0440A25D0F92F600CE0A916D03A29535EA87780EF2181333F"
+        },
+        {
+          "name": "motion-p0-45",
+          "sha256": "AB5D1737235EBA1EE2D702681882E5F26FAF1F4FE7794CF3595029ED4232392A"
+        },
+        {
+          "name": "motion-p0-46",
+          "sha256": "7D7A1EC99FEBDCD081C7B90E706BCEA38A6003BFC8E125B548A6AD751C95A4EF"
+        },
+        {
+          "name": "motion-p0-47",
+          "sha256": "346A8454CDF0E6039F81C51FB2B00FEACFD52F73047CD4E47E867C472BB0621D"
+        }
+      ]
+    }
+  ],
+  "provenance_note": "Canonical previews retain the original capture executable hash; final release verification is a separate record. Private machine paths and excluded terrain crops are omitted."
+}

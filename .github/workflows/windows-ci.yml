@@ -1,0 +1,62 @@
+name: Windows build and tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Windows x64 / ${{ matrix.configuration }}
+    runs-on: windows-2022
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - configuration: Debug
+            preset: windows-ninja-debug
+          - configuration: Release
+            preset: windows-ninja-release
+    env:
+      CMAKE_BUILD_PARALLEL_LEVEL: '4'
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python for CPU verification
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+          architecture: x64
+
+      - name: Install CPU verification dependencies
+        run: |
+          python -m pip install --disable-pip-version-check numpy pillow
+          if ($LASTEXITCODE -ne 0) { throw 'CPU verification dependencies could not be installed.' }
+
+      - name: Configure, build and test ${{ matrix.configuration }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          . ./tools/Use-InstalledToolchain.ps1
+          $taskPython = (Get-Command python.exe -CommandType Application).Source
+          cmake --version
+          ninja --version
+          cmake --preset windows-ninja -DBUILD_TESTING=ON -DVAPORCRUISE_CPU_VERIFICATION=ON -DVAPORCRUISE_GPU_TESTS=OFF "-DPython3_EXECUTABLE=$taskPython"
+          if ($LASTEXITCODE -ne 0) { throw 'CMake configure failed.' }
+          cmake --build --preset '${{ matrix.preset }}'
+          if ($LASTEXITCODE -ne 0) { throw 'CMake build failed.' }
+          ctest --preset '${{ matrix.preset }}'
+          if ($LASTEXITCODE -ne 0) { throw 'CTest failed.' }
